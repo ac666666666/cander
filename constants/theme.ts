@@ -17,6 +17,14 @@ export const Colors = {
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
   },
+  warm: {
+    text: '#2F2A22',
+    background: '#FFF7E6',
+    tint: '#D48C00',
+    icon: '#8C7A6B',
+    tabIconDefault: '#8C7A6B',
+    tabIconSelected: '#D48C00',
+  },
   dark: {
     text: '#ECEDEE',
     background: '#151718',
@@ -45,9 +53,10 @@ export const Fonts = Platform.select({
     mono: 'monospace',
   },
   web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
+    // Include common Chinese fallbacks to improve CJK rendering across platforms
+    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'Noto Sans SC', 'Source Han Sans SC', sans-serif",
+    serif: "Georgia, 'Times New Roman', 'Noto Serif SC', serif",
+    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', 'Noto Sans SC', sans-serif",
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });

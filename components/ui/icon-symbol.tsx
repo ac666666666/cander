@@ -18,6 +18,14 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'calendar': 'event',
+  'book.closed.fill': 'menu-book',
+  // 新增：顶部操作需要的图标
+  'plus': 'add',
+  'ellipsis': 'more-vert',
+  'mic.fill': 'mic',
+  'chart.bar.fill': 'bar-chart',
+  'checkmark': 'check',
 } as IconMapping;
 
 /**
