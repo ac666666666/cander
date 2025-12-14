@@ -74,30 +74,30 @@
 
 ```mermaid
 graph TD
-    User[用户 (Client)] -->|交互/语音| UI[UI 界面 (React Native)]
+    User["用户 (Client)"] -->|交互/语音| UI["UI 界面 (React Native)"]
 
     subgraph "前端应用 (Frontend App)"
         direction TB
-        UI -->|触发操作| Store[Zustand Store (状态管理)]
-        UI -->|页面导航| Router[Expo Router]
-        Store -->|数据同步| APIService[API Service (Axios/Fetch)]
-        UI -->|语音流| AudioModule[Audio Module]
+        UI -->|触发操作| Store["Zustand Store (状态管理)"]
+        UI -->|页面导航| Router["Expo Router"]
+        Store -->|数据同步| APIService["API Service (Axios/Fetch)"]
+        UI -->|语音流| AudioModule["Audio Module"]
     end
 
-    APIService -->|HTTP 请求| BackendAPI[后端 API (Express)]
+    APIService -->|HTTP 请求| BackendAPI["后端 API (Express)"]
 
     subgraph "后端服务 (Backend Server)"
-        BackendAPI -->|路由分发| Controller[业务逻辑控制器]
-        Controller -->|SQL 读写| DBClient[MySQL 客户端]
+        BackendAPI -->|路由分发| Controller["业务逻辑控制器"]
+        Controller -->|SQL 读写| DBClient["MySQL 客户端"]
     end
 
     subgraph "数据存储 (Database)"
-        DBClient -->|TCP 连接| MySQL[(MySQL 数据库)]
+        DBClient -->|TCP 连接| MySQL[("MySQL 数据库")]
     end
 
     subgraph "外部 AI 服务 (3rd Party AI Services)"
-        AudioModule -->|WebSocket 流式传输| Xunfei[讯飞语音转写 API]
-        UI -->|HTTP 调用| Zhipu[智谱 AI (GLM-4)]
+        AudioModule -->|WebSocket 流式传输| Xunfei["讯飞语音转写 API"]
+        UI -->|HTTP 调用| Zhipu["智谱 AI (GLM-4)"]
     end
 ```
 
